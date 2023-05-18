@@ -65,3 +65,40 @@ export function findLength_1Seq(s: string): number {
     }
     return ans;
 }
+
+export function findLargestSumAndLengthK(nums: number[], k: number): number {
+    let left = 0;
+    let sum = 0;
+    let curr = 0;
+
+    for (let right = 0; right < nums.length; right++) {
+        curr += nums[right];
+
+        if (right >= k) {
+            curr -= nums[left]
+            left++;
+        }
+
+        sum = Math.max(sum, curr);
+    }
+
+    return sum;
+}
+
+export function findLargestSumAndLengthK_2(nums: number[], k: number): number {
+    let curr = 0;
+    let sum = 0;
+
+    for (let i = 0; i < k; i++) {
+        curr += nums[i];
+    }
+
+    sum = curr;
+
+    for (let i = k; i < nums.length; i++) {
+        curr += nums[i] - nums[i - 4];
+        sum = Math.max(sum, curr);
+    }
+
+    return sum;
+}
