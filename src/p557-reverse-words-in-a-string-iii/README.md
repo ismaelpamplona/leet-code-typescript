@@ -10,4 +10,6 @@ So, at this point I know:
 
 - n = number of elements
 - time complexity: O(n)
-- space complexity: O(n)
+- space complexity: O(1)
+
+You could also argue that we are using $O(n)$ space to build the output string (we normally don't count the output as part of the space complexity, but in this case we are temporarily using some space to build it).
