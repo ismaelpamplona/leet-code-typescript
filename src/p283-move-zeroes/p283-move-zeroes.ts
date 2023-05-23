@@ -1,9 +1,9 @@
 export function moveZeroes(nums: number[]) {
-    let lastNonZeroFoundAt = 0;
+    let lastNonZeroFoundAt = 0
 
     for (let i = 0; i < nums.length; i++) {
         if (nums[i] !== 0) {
-            [nums[lastNonZeroFoundAt], nums[i]] = [nums[i], nums[lastNonZeroFoundAt]];
+            [nums[lastNonZeroFoundAt], nums[i]] = [nums[i], nums[lastNonZeroFoundAt]]
             lastNonZeroFoundAt++
         }
 
