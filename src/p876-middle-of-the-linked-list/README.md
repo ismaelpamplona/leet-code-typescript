@@ -1,5 +1,5 @@
 # p876-middle-of-the-linked-list
-[https://leetcode.com/problems/middle-of-the-linked-list/description/](https://leetcode.com/problems/middle-of-the-linked-list/description/)
+[https://leetcode.com/problems/middle-of-the-linked-listn/](https://leetcode.com/problems/middle-of-the-linked-listn/)
 
 ## First approach - Iterative
 

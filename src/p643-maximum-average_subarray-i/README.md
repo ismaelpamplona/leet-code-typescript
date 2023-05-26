@@ -1,5 +1,5 @@
 # p643-maximum-average-subarray-i
-[https://leetcode.com/problems/maximum-average-subarray-i/description/](https://leetcode.com/problems/maximum-average-subarray-i/description/)
+[https://leetcode.com/problems/maximum-average-subarray-in/](https://leetcode.com/problems/maximum-average-subarray-in/)
 
 ## First approach
 

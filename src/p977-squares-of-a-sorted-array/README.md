@@ -1,5 +1,5 @@
 # p977-squares-of-a-sorted-array
-[https://leetcode.com/problems/squares-of-a-sorted-array/description/](https://leetcode.com/problems/squares-of-a-sorted-array/description/)
+[https://leetcode.com/problems/squares-of-a-sorted-arrayn/](https://leetcode.com/problems/squares-of-a-sorted-arrayn/)
 
 ## First approach - Two Pointers
 

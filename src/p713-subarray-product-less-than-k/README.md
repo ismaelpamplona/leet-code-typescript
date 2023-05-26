@@ -1,5 +1,5 @@
 # p713-subarray-product-less-than-k
-[https://leetcode.com/problems/subarray-product-less-than-k/description/](https://leetcode.com/problems/subarray-product-less-than-k/description/)
+[https://leetcode.com/problems/subarray-product-less-than-kn/](https://leetcode.com/problems/subarray-product-less-than-kn/)
 
 ## First approach - Sliding Window
 

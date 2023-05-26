@@ -1,5 +1,5 @@
 # p1004-max-consecutive-ones-iii
-[https://leetcode.com/problems/max-consecutive-ones-iii/description/](https://leetcode.com/problems/max-consecutive-ones-iii/description/)
+[https://leetcode.com/problems/max-consecutive-ones-iiin/](https://leetcode.com/problems/max-consecutive-ones-iiin/)
 
 ## First approach
 
