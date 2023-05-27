@@ -1,6 +1,5 @@
 export function intersection(nums: number[][]): number[] {
     let result: number[] = []
-
     let map: Map<number, number> = new Map()
 
     for (let i = 0; i < nums.length; i++) {
@@ -20,6 +19,6 @@ export function intersection(nums: number[][]): number[] {
         }
     }
 
-    result.sort((a, b) => a - b);
+    result.sort((a, b) => a - b)
     return result
 };
