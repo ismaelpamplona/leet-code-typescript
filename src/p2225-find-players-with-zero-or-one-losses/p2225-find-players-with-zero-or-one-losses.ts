@@ -7,11 +7,11 @@ export function findWinners(matches: number[][]): number[][] {
         let winner = matches[i][0]
         let loser = matches[i][1]
 
-        const winnerEntry = map.get(winner) || 0;
-        map.set(winner, winnerEntry);
+        const winnerEntry = map.get(winner) || 0
+        map.set(winner, winnerEntry)
 
-        const loserEntry = map.get(loser) || 0;
-        map.set(loser, loserEntry + 1);
+        const loserEntry = map.get(loser) || 0
+        map.set(loser, loserEntry + 1)
     }
 
     for (const [key, value] of map) {
@@ -22,7 +22,7 @@ export function findWinners(matches: number[][]): number[][] {
         }
     }
 
-    noLost.sort((a, b) => a - b);
-    oneLost.sort((a, b) => a - b);
+    noLost.sort((a, b) => a - b)
+    oneLost.sort((a, b) => a - b)
     return [noLost, oneLost]
-};
+}
