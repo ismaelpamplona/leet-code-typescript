@@ -7,8 +7,6 @@ export function largestUniqueNumber(nums: number[]): number {
         map.set(nums[i], entry + 1)
     }
 
-    console.log(map)
-
     for (const [key, value] of map) {
         if (value === 1) ans = Math.max(ans, key)
     }
