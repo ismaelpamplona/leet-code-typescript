@@ -18,7 +18,5 @@ export function groupAnagrams(strs: string[]): string[][] {
         ans.push(group)
     }
 
-    console.log(ans)
-
     return ans
 }
