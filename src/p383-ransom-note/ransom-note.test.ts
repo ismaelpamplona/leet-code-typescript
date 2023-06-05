@@ -1,32 +1,32 @@
-import { canConstruct } from "./ransom-note"
+import { canConstructHash } from "./ransom-note"
 
-describe("case-01", () => {
-    it("should return 'false' when invoking the function", () => {
-        const result = canConstruct("a", "b")
-        expect(result).toBe(false)
-    })
+
+it("case-01", () => {
+    const ransomNote = "a"
+    const magazine = "b"
+    const result2 = canConstructHash(ransomNote, magazine)
+    expect(result2).toBe(true)
 })
 
-describe("case-02", () => {
-    it("should return 'false' when invoking the function", () => {
-        const result = canConstruct("aa", "ab")
-        expect(result).toBe(false)
-    })
+it("case-02", () => {
+    const ransomNote = "aa"
+    const magazine = "ab"
+    const result2 = canConstructHash(ransomNote, magazine)
+    expect(result2).toBe(true)
 })
 
-describe("case-03", () => {
-    it("should return 'true' when invoking the function", () => {
-        const result = canConstruct("aa", "aab")
-        expect(result).toBe(true)
-    })
+it("case-03", () => {
+    const ransomNote = "aa"
+    const magazine = "aab"
+    const result2 = canConstructHash(ransomNote, magazine)
+    expect(result2).toBe(true)
+
 })
 
-describe("case-04", () => {
-    it("should return 'true' when invoking the function", () => {
-        const result = canConstruct(
-            "bg",
-            "efjbdfbdgfjhhaiigfhbaejahgfbbgbjagbddfgdiaigdadhcfcj"
-        )
-        expect(result).toBe(true)
-    })
+it("case-04", () => {
+    const ransomNote = "bg"
+    const magazine = "efjbdfbdgfjhhaiigfhbaejahgfbbgbjagbddfgdiaigdadhcfcj"
+    const result2 = canConstructHash(ransomNote, magazine)
+    expect(result2).toBe(true)
 })
+
