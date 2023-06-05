@@ -4,7 +4,7 @@ export function equalPairs(grid: number[][]): number {
     let map: Map<string, number> = new Map()
 
     for (let i = 0; i < grid.length; i++) {
-        let strKey = grid[i].join("")
+        let strKey = grid[i].join(".")
         let entry = map.get(strKey)
 
 
@@ -20,10 +20,11 @@ export function equalPairs(grid: number[][]): number {
     }
 
     for (let i = 0; i < cols.length; i++) {
-        let strKey = cols[i].join("")
+        let strKey = cols[i].join(".")
         let entry = map.get(strKey)
 
         if (entry !== undefined && entry >= 1) {
+            console.log("")
             ans += entry
         }
 

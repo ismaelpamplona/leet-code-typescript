@@ -18,7 +18,7 @@ it("case-02", () => {
         [2, 4, 2, 2]
     ]
     const result = equalPairs(grid)
-    // expect(result).toBe(3)
+    expect(result).toBe(3)
 })
 
 it("case-03", () => {
@@ -29,12 +29,15 @@ it("case-03", () => {
         [2, 5, 2, 2],
     ]
     let result = equalPairs(grid)
-    // expect(result).toBe(3)
+    expect(result).toBe(3)
 })
 
 
 it("case-04", () => {
-    let grid = [[11, 1], [1, 11]]
+    let grid = [
+        [11, 1],
+        [1, 11]
+    ]
     let result = equalPairs(grid)
-    // expect(result).toBe(2)
+    expect(result).toBe(2)
 })
