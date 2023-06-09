@@ -13,8 +13,5 @@
 - m = number of characters in magazine
 - k = distinct characters in magazine
 - time complexity: O(m)
-- space complexity: 
-$$
-O(k), k <= 26, k -> 1, O(1)
-$$
+- space complexity: $O(k), k <= 26, k -> 1, O(1)$
 
