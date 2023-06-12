@@ -14,7 +14,6 @@ export function findLucky(arr: number[]): number {
 
     for (let i = 0; i < arr.length; i++) {
         let entry = map.get(arr[i])
-
         if (entry === arr[i]) ans = Math.max(ans, entry)
     }
 
