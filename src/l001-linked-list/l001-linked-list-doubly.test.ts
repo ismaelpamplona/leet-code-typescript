@@ -14,6 +14,7 @@ three.next = five
 five.prev = three
 let head: DoublyNode = one
 
+
 it("addNode", () => {
     let _one: DoublyNode = new DoublyNode(1)
     let _two: DoublyNode = new DoublyNode(2)

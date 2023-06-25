@@ -57,3 +57,47 @@ export class DoublyNode {
         }
     }
 }
+
+
+export class SentinelNode {
+    val: number
+    next: SentinelNode | null
+    prev: SentinelNode | null
+
+    constructor(val: number) {
+        this.val = val
+        this.prev = null
+        this.next = null
+    }
+
+    addToEnd(nodeToAdd: SentinelNode, tail: SentinelNode): void {
+        nodeToAdd.next = tail
+        nodeToAdd.prev = tail.prev
+        if (tail.prev) tail.prev.next = nodeToAdd
+        tail.prev = nodeToAdd
+
+    }
+
+    deleteFromEnd(head: SentinelNode, tail: SentinelNode): void {
+        if (head.next !== tail) {
+            if (tail.prev?.prev) tail.prev.prev.next = tail
+            if (tail.prev) tail.prev = tail.prev.prev
+        }
+    }
+
+    addToStart(nodeToAdd: SentinelNode, head: SentinelNode): void {
+        nodeToAdd.prev = head
+        nodeToAdd.next = head.next
+        if (head.next) head.next.prev = nodeToAdd
+        head.next = nodeToAdd
+    }
+
+    deleteFromStart(head: SentinelNode, tail: SentinelNode): void {
+        if (head.next !== tail) {
+            if (head.next?.next) head.next.next.prev = head
+            if (head.next) head.next = head.next.next
+        }
+    }
+}
+
+
