@@ -14,22 +14,6 @@ three.next = five
 five.prev = three
 let head: DoublyNode = one
 
-
-// it("deleteNode", () => {
-//     let _one: DoublyNode = new DoublyNode(1)
-//     let _two: DoublyNode = new DoublyNode(2)
-//     let _three: DoublyNode = new DoublyNode(3)
-//     let _four: DoublyNode = new DoublyNode(4)
-//     let _five: DoublyNode = new DoublyNode(5)
-//     _one.next = _two
-//     _two.next = _three
-//     _three.next = _four
-//     _four.next = _five
-//     let _head: DoublyNode = _one
-//     _head.deleteNode(_three)
-//     expect(head).toEqual(_head)
-// })
-
 it("addNode", () => {
     let _one: DoublyNode = new DoublyNode(1)
     let _two: DoublyNode = new DoublyNode(2)
