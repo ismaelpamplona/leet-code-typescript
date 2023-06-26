@@ -7,6 +7,11 @@ export class Node {
         this.next = null
     }
 
+    addNode(prevNode: Node, nodeToAdd: Node): void {
+        nodeToAdd.next = prevNode.next
+        prevNode.next = nodeToAdd
+    }
+
     getSum(): number {
         let ans = 0
         let head: Node | null = this
@@ -22,13 +27,36 @@ export class Node {
         return this.val + ((this.next as Node)?.getSumRec() || 0)
     }
 
-    addNode(prevNode: Node, nodeToAdd: Node): void {
-        nodeToAdd.next = prevNode.next
-        prevNode.next = nodeToAdd
-    }
 
     deleteNode(prevNode: Node): void {
         prevNode.next = (prevNode.next as Node).next
+    }
+
+    getMiddleNodeIterating(): Node | null {
+        let size = 0
+        let dummy: Node | null = this
+        while (dummy) {
+            size++
+            dummy = dummy.next
+        }
+
+        if (size % 2 == 0) return null
+
+        let head: Node | null = this
+        for (let i = 0; i < Math.floor(size / 2); i++) {
+            if (head) head = head.next
+        }
+        return head
+    }
+
+    getMiddleNodePointers(): Node | null {
+        let slow: Node | null = this
+        let fast: Node | null = this
+        while (fast && fast.next) {
+            if (slow) slow = slow.next
+            if (fast) fast = fast.next.next
+        }
+        return slow
     }
 }
 

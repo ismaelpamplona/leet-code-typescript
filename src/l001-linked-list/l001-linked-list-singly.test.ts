@@ -11,10 +11,6 @@ two.next = three
 three.next = five
 let head: Node = one
 
-it("test", () => {
-    // console.log(util.inspect(head, { depth: null, colors: true }))
-})
-
 it("getSum", () => {
     let result = head.getSum()
     expect(result).toBe(11)
@@ -53,4 +49,12 @@ it("addNode", () => {
     let _head: Node = _one
     head.addNode(three, four)
     expect(head).toEqual(_head)
+})
+
+it("test-middle-node", () => {
+    let middleIt = head.getMiddleNodeIterating()
+    let middlePointers = head.getMiddleNodePointers()
+    console.log(middleIt)
+    expect(middleIt?.val || null).toBe(3)
+    expect(middlePointers?.val || null).toBe(3)
 })
