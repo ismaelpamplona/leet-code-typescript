@@ -1,6 +1,25 @@
 # p876-middle-of-the-linked-list
 [https://leetcode.com/problems/middle-of-the-linked-listn/](https://leetcode.com/problems/middle-of-the-linked-listn/)
 
+## Initial provided code
+```Typescript
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     val: number
+ *     next: ListNode | null
+ *     constructor(val?: number, next?: ListNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.next = (next===undefined ? null : next)
+ *     }
+ * }
+ */
+
+function middleNode(head: ListNode | null): ListNode | null {
+
+};
+```
+
 ## First approach - Iterative
 
 In this case, I iterated throw the linked list and copy each node to an `array`. After this, a returned the `array[n / 2]` to get the middle node.
