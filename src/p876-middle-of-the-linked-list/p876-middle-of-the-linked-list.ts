@@ -58,5 +58,4 @@ export function fromListToVec(head: ListNode | null): number[] {
         head = head.next
     }
     return vec
-
 }
