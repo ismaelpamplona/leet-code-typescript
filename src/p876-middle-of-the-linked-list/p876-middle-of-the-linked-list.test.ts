@@ -1,5 +1,4 @@
 import {
-    ListNode,
     fromVecToListIt,
     fromListToVec,
     fromVecToListRec,
