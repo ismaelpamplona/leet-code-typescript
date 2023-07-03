@@ -32,6 +32,42 @@ export function reverseBetweenIt(head: ListNode | null, left: number, right: num
     return dummy.next
 }
 
+export function reverseBetweenRec(head: ListNode | null, left: number, right: number): ListNode | null {
+    let reverse = (before: ListNode | null, left: number, right: number): ListNode | null => {
+        if (!before) return null
+        if (left == right && before) return before.next
+        let first: ListNode | null, revSublistStart: ListNode | null, revSublistEnd: ListNode | null, last: ListNode | null, after: ListNode | null
+        first = revSublistStart = revSublistEnd = last = after = null
+        first = before.next
+        if (right - left > 1 && first) {
+            revSublistEnd = reverse(first, left + 1, right - 1)
+            revSublistStart = first.next
+            if (revSublistEnd) last = revSublistEnd.next
+        } else if (first) {
+            last = first.next
+            revSublistStart = first
+            revSublistEnd = last
+        }
+
+        if (last) after = last.next
+        if (before) before.next = last
+        if (last) last.next = revSublistStart
+        if (revSublistEnd) revSublistEnd.next = first
+        if (first) first.next = after
+
+        return first
+    }
+
+    let dummy: ListNode | null = new ListNode(-1, head)
+    let before: ListNode | null = dummy
+    for (let i = 1; i < left; i++) {
+        if (before) before = before.next
+    }
+
+    reverse(before, left, right)
+    return dummy.next
+}
+
 export function fromVecToListIt(vec: number[]): ListNode | null {
     if (vec.length === 0) return null
     let head = new ListNode(vec[0])

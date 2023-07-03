@@ -25,3 +25,11 @@ function reverseBetween(head: ListNode | null, left: number, right: number): Lis
 - n = number of nodes
 - time complexity: O(n)
 - space complexity: O(1)
+
+## Second approach - Recursive
+
+- n = number of nodes
+- time complexity: O(n)
+- space complexity: O(n)
+
+
