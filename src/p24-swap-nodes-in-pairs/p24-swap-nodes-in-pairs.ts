@@ -15,8 +15,7 @@ export class ListNode {
 export function swapPairsIt(head: ListNode | null): ListNode | null {
     if (!head) return null
     let cur: ListNode | null = head
-    let dummy = new ListNode(-1)
-    dummy.next = head
+    let dummy = new ListNode(-1, head)
     let prev = dummy
     while (cur && cur.next) {
         let first = cur
@@ -28,6 +27,24 @@ export function swapPairsIt(head: ListNode | null): ListNode | null {
 
         prev = first
         cur = first.next
+    }
+    return dummy.next
+}
+
+export function swapPairsIt2(head: ListNode | null): ListNode | null {
+    if (!head) return null
+    let n1: ListNode | null = head
+    let dummy = new ListNode(-1, head)
+    let prev = dummy
+    while (n1 && n1.next) {
+        let n2 = n1.next
+
+        prev.next = n2
+        n1.next = n2.next
+        n2.next = n1
+
+        prev = n1
+        n1 = n1.next
     }
     return dummy.next
 }
