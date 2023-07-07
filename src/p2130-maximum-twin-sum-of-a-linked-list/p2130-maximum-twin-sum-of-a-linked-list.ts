@@ -12,10 +12,8 @@ class ListNode {
 export function pairSum(head: ListNode | null): number {
     let slow = head
     let fast = head
-    let last = head
     let maxSum = 0
     while (slow && fast && fast.next) {
-        last = slow
         slow = slow.next
         fast = fast.next.next
     }
@@ -27,7 +25,6 @@ export function pairSum(head: ListNode | null): number {
         prev = slow
         slow = next
     }
-    if (last) last.next = prev
     let start = head
     while (start && prev) {
         maxSum = Math.max(maxSum, start.val + prev.val)
