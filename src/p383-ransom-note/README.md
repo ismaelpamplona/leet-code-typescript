@@ -1,5 +1,5 @@
 # p383-ransom-note
-[https://leetcode.com/problems/ransom-noten/](https://leetcode.com/problems/ransom-noten/)
+[https://leetcode.com/problems/ransom-note/](https://leetcode.com/problems/ransom-note/)
 
 
 ## First approach
